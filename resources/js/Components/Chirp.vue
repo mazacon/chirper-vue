@@ -1,20 +1,20 @@
 <script setup>
-import DropDown from '@/Components/Dropdown.vue';
+import Dropdown from '@/Components/Dropdown.vue';
 import InputError from '@/Components/InputError.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import { useForm } from '@inertiajs/vue3';
 import { ref } from 'vue';
-
+ 
 dayjs.extend(relativeTime);
-
+ 
 const props = defineProps(['chirp']);
-
+ 
 const form = useForm({
     message: props.chirp.message,
 });
-
+ 
 const editing = ref(false);
 </script>
  
